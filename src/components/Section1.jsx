@@ -4,7 +4,7 @@ const Section1 = () => {
     return (
         <div className='h-[800px]'>
 
-            <div className='h-[85%] w-[100%] flex justify-start items-center bg-[url(./src/assets/images/social.jpg)] bg-cover bg-no-repeat bg-center'>
+            <div className='h-[85%] w-[100%] flex justify-start items-center bg-[url(/images/social.jpg)] bg-cover bg-no-repeat bg-center'>
                 <div className='flex flex-col gap-5 md:gap-2 items-center md:items-end w-[100%] md:w-[40%] text-gray-50'>
                     <div className='flex gap-3 justify-center md:justify-end items-baseline relative'>
                         <span>____________________________ </span> <span className='text-[1.5em] md:text-[2em] px-[5px] font-semibold bg-[url(./src/assets/images/social.jpg)] bg-[1100px]  md:static absolute right-20 bg-transparent'>  BAG</span>
@@ -17,7 +17,7 @@ const Section1 = () => {
                 <div className='flex grow-1 justify-center items-center border-gray-800 border-[1px]'>
                     <img
                         className='h-auto w-[160px] aspect-[2/1]'
-                        src="./src/assets/images/dijital-cube.jpg" alt="" />
+                        src="/images/dijital-cube.jpg" alt="" />
                 </div>
                 <div className='flex grow-1 justify-center items-center border-gray-800 border-[1px]'>
                     <img
@@ -27,22 +27,22 @@ const Section1 = () => {
                 <div className='flex grow-1 justify-center items-center border-gray-800 border-[1px]'>
                     <img
                         className='h-auto w-[160px] aspect-[2/1]'
-                        src="./src/assets/images/mangentle.jpg" alt="" />
+                        src="/images/mangentle.jpg" alt="" />
                 </div>
                 <div className='hidden xsm:flex grow-1 justify-center items-center border-gray-800 border-[1px]'>
                     <img
                         className='h-auto w-[160px] aspect-[2/1]'
-                        src="./src/assets/images/img.jpg" alt="" />
+                        src="/images/img.jpg" alt="" />
                 </div>
                 <div className='hidden sm:flex grow-1 justify-center items-center border-gray-800 border-[1px]'>
                     <img
                         className='h-auto w-[160px] aspect-[2/1]'
-                        src="./src/assets/images/jewellery.jpg" alt="" />
+                        src="/images/jewellery.jpg" alt="" />
                 </div>
                 <div className='hidden lg:flex grow-1 justify-center items-center border-gray-800 border-[1px] '>
                     <img
                         className='h-auto w-[160px] aspect-[2/1] '
-                        src="./src/assets/images/luxury.jpg" alt="" />
+                        src="/images/luxury.jpg" alt="" />
                 </div>
             </div>
 
