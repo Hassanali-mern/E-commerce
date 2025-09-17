@@ -22,7 +22,7 @@ const Section1 = () => {
                 <div className='flex grow-1 justify-center items-center border-gray-800 border-[1px]'>
                     <img
                         className='h-auto w-[160px] '
-                        src="./src/assets/images/vende.jpg" alt="" />
+                        src="/images/vende.jpg" alt="" />
                 </div>
                 <div className='flex grow-1 justify-center items-center border-gray-800 border-[1px]'>
                     <img
