@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+.social-links {
+    @apply hover:text-red-500 [transition:color_0.5s_ease-in-out] cursor-pointer
+}
+
+.nav-option {
+    @apply text-[1.1em] text-gray-50 font-semibold
+    hover:text-red-500
+    [transition:color_0.5s_ease-in-out]
+}
+
