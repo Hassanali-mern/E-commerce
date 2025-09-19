@@ -2,18 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 const Section2 = () => {
-
-    let [products, setProducts] = useState([])
-
-    let fetchApi = async() => {
-        let data = await fetch("https://fakestoreapi.com/products/").then(res => res.json())
-        console.log(data)
-        setProducts(data)
-    }
-    useEffect(() => {
-        fetchApi()
-    }, [])
-
+    
     return (
         <div className='h-[1000px] md:h-[500px] lg:h-[700px] w-[100%] py-[30px] px-[10px] flex flex-col items-center md:flex-row justify-center gap-10 box-border'>
             <div className='h-[100%] max-w-[600px] w-[100%] md:w-[50%] flex flex-col gap-10 '>

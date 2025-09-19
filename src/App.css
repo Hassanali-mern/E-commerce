@@ -5,8 +5,16 @@
 }
 
 .nav-option {
-    @apply text-[1.1em] text-gray-50 font-semibold
-    hover:text-red-500
-    [transition:color_0.5s_ease-in-out]
+    @apply text-[1.1em] text-gray-50 font-semibold hover:text-red-500 [transition:color_0.5s_ease-in-out]
 }
 
+.product-div:hover .add-btn {
+    @apply  opacity-100 visible  [transition:all_0.5s_ease-in-out]
+}
+
+.product-div:hover .product-image{
+    @apply scale-110  [transition:all_0.5s_ease-in-out]
+}
+.txt-div:hover .product-title, .txt-div:hover .product-price{
+    @apply text-red-500  [transition:all_0.5s_ease-in-out]
+} 

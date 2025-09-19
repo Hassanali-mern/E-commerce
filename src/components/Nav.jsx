@@ -6,7 +6,7 @@ const Nav = () => {
 
 
   return (
-    <div className='h-[100%] lg:h-[70%] w-[100%] flex  border-b-[2px] border-gray-500/40 '>
+    <div className='h-[100%] lg:h-[70%] w-[100%] max-w-[1400px] flex justify-center  '>
       <div className='h-[100%] w-[25%] lg:w-[20%] hidden lg:flex gap-5 items-center justify-center'>
         <>
           <svg
@@ -50,7 +50,7 @@ const Nav = () => {
             Aurelia Mart
           </h1>
         </Link>
-        <p className="text-[1em] text-gray-50 hidden sm:block">
+        <p className="text-[1em] text-gray-50 text-center hidden sm:block">
           Consectetur ipsum dolor sit amet adipisicing.
         </p>
 
@@ -65,7 +65,7 @@ const Nav = () => {
             />
           </svg>
         </Link>
-        <Link>
+        <Link to={'/auth'}>
           <svg
             className="w-7 h-7 text-gray-800 dark:text-gray-300 hover:dark:text-red-500 [transition:color_0.5s_ease-in-out]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"
           >
@@ -74,7 +74,7 @@ const Nav = () => {
             />
           </svg>
         </Link>
-        <Link to={''}>
+        <Link to={'/cart'}>
           <svg
             className="w-7 h-7 text-gray-800 dark:text-gray-300 hover:dark:text-red-500 [transition:color_0.5s_ease-in-out]" aria-hidden='true' xmlns="http://www.w3.org/2000/svg width={24 height={24 fill=" none viewBox="0 0 24 24"
           >

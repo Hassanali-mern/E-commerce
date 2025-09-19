@@ -5,7 +5,7 @@ import SecNav from './SecNav'
 const Header = () => {
     return (
         <>
-            <div className='flex flex-col h-[150px] lg:h-[260px] w-[100%] '>
+            <div className='flex flex-col justify-center items-center h-[150px] lg:h-[260px] w-[100%] '>
                 <Nav />
                 <SecNav/>
             </div>
