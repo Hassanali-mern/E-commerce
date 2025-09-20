@@ -1,5 +1,22 @@
 @import 'tailwindcss';
 
+.main-div::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main-div::-webkit-scrollbar-track {
+    background: #272727;
+}
+
+.main-div::-webkit-scrollbar-thumb {
+    background: #5b5b5b;
+    border-radius: 50px;
+}
+
+.main-div::-webkit-scrollbar-thumb:hover {
+    background: #4c5b73;
+}
+
 .social-links {
     @apply hover:text-red-500 [transition:color_0.5s_ease-in-out] cursor-pointer
 }
@@ -9,12 +26,17 @@
 }
 
 .product-div:hover .add-btn {
-    @apply  opacity-100 visible  [transition:all_0.5s_ease-in-out]
+    @apply opacity-100 visible [transition:all_0.5s_ease-in-out]
 }
 
-.product-div:hover .product-image{
-    @apply scale-110  [transition:all_0.5s_ease-in-out]
+.product-div:hover .product-image {
+    @apply scale-110 [transition:all_0.5s_ease-in-out]
 }
-.txt-div:hover .product-title, .txt-div:hover .product-price{
-    @apply text-red-500  [transition:all_0.5s_ease-in-out]
-} 
+
+.txt-div:hover .product-title, .txt-div:hover .product-price {
+    @apply text-red-500 [transition:all_0.5s_ease-in-out]
+}
+
+.input{
+    @apply h-[55px] w-full font-semibold tracking-wide text-[1.2em] outline-0 border-[1px] border-neutral-600 px-[20px] rounded-[10px]
+}

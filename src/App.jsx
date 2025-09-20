@@ -7,16 +7,31 @@ import Landingpage from './pages/Landingpage'
 import { Route, Routes } from 'react-router'
 import Page404 from './pages/Page404'
 import Auth from './pages/Auth'
+import Cart from './pages/Cart'
+import Products from './pages/Products'
+import Product from './components/Product'
+import Pdp from './pages/Pdp'
+import Login from './pages/Login'
+import Rejister from './pages/Rejister'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className='h-[100vh] w-[100vw] bg-black overflow-y-auto '>
+      <div className='h-[100vh] w-[100vw] bg-black overflow-y-auto main-div'>
         <Routes>
           <Route path='/' element={<Landingpage/>}/>
-          <Route path='/auth' element={<Auth/>}/>
+          <Route path='/auth' element={<Auth/>}>
+            <Route index element={<Login/>} />
+            <Route index path='/auth/login' element={<Login/>} />
+            <Route path='/auth/rejister' element={<Rejister/>}/>
+          </Route>
+          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/products'  >
+            <Route index element={<Products />} />
+            <Route path=':id' element={<Pdp/>} />
+          </Route>
           <Route path='*' element={<Page404/>}/>
         </Routes>
       </div>

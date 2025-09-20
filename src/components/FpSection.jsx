@@ -1,7 +1,13 @@
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
 import Product from './Product'
+import { CartContext } from '../context/CartContext'
 
 const FpSection = memo(() => {
+
+    const {cart} = useContext(CartContext)
+
+    console.log()
+
     return (
         <div>
 
@@ -14,10 +20,10 @@ const FpSection = memo(() => {
                 <h2 className='text-[2em] lg:text-[2.5em] text-gray-50 font-bold uppercase text-center'>Feature Prodects</h2>
             </div>
             <div className='h-[500px] flex gap-10 flex-wrap justify-center  p-[25px] '>
-                <Product/> 
-                <Product/> 
-                <Product/> 
-                <Product/> 
+                <Product />
+                <Product />
+                <Product />
+                <Product />
             </div>
         </div>
     )

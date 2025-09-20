@@ -9,7 +9,7 @@ const SecNav = () => {
                 <Link to={'/'}>Home</Link>
             </li>
             <li className='nav-option'>
-                <Link to={'/'}>All Products</Link>
+                <Link to={'/products'}>All Products</Link>
             </li>
             <li className='nav-option'>
                 <Link to={'/'}>Men's Clothing</Link>

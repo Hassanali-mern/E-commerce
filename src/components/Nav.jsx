@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router'
+import { CartContext } from '../context/CartContext'
 
 const Nav = () => {
 
+  const { cart } = useContext(CartContext)
 
 
   return (
@@ -37,16 +39,16 @@ const Nav = () => {
               fill="currentColor" fillRule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clipRule="evenodd"
             />
           </svg>
-        </> 
+        </>
 
-
+ 
       </div>
-      <div className=' w-[15%] lg:w-0 lg:hidden flex items-center justify-center'>
+      <div className=' w-[30%] md:w-[15%] lg:w-0 lg:hidden flex items-center justify-center'>
         <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#D9D9D9"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
       </div>
-      <div className='h-[100%] w-[65%] sm:w-[70%] lg:w-[60%] flex flex-col justify-center items-center'>
+      <div className='h-[100%] w-[60%] sm:w-[70%] lg:w-[60%] flex flex-col justify-center items-center box-border'>
         <Link to={'/'}>
-          <h1 className="text-gray-50 text-[2em] text-center text-wrap lg:text-[3em] font-bold hover:text-red-500 [transition:color_0.5s_ease-in-out]">
+          <h1 className="text-gray-50 text-[1.6em] sm:text-[2em] text-center text-wrap lg:text-[3em] font-bold hover:text-red-500 [transition:color_0.5s_ease-in-out]">
             Aurelia Mart
           </h1>
         </Link>
@@ -55,17 +57,17 @@ const Nav = () => {
         </p>
 
       </div>
-      <div className="h-[100%] w-[15%] flex gap-2 sm:gap-5 px-[15px] items-center justify-center">
-        <Link classname=" hidden lg:inline" >
+      <div className="h-[100%] w-[35%] md:w-[20%] flex gap-1 sm:gap-5 px-[10px] items-center justify-center">
+        <Link className=" hidden lg:flex  h-[40px] w-[40px]  items-center" >
           <svg
-            className="hidden lg:inline w-7 h-7 text-gray-800 dark:text-gray-300 hover:dark:text-red-500 [transition:color_0.5s_ease-in-out]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"
+            className=" w-7 h-7 text-gray-800 dark:text-gray-300 hover:dark:text-red-500 [transition:color_0.5s_ease-in-out]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"
           >
             <path
               stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
             />
           </svg>
         </Link>
-        <Link to={'/auth'}>
+        <Link to={'/auth'} className='relative h-[40px] w-[40px] flex items-center'>
           <svg
             className="w-7 h-7 text-gray-800 dark:text-gray-300 hover:dark:text-red-500 [transition:color_0.5s_ease-in-out]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"
           >
@@ -74,13 +76,14 @@ const Nav = () => {
             />
           </svg>
         </Link>
-        <Link to={'/cart'}>
+        <Link to={'/cart'} className='relative h-[40px] w-[40px] flex items-center'>
           <svg
-            className="w-7 h-7 text-gray-800 dark:text-gray-300 hover:dark:text-red-500 [transition:color_0.5s_ease-in-out]" aria-hidden='true' xmlns="http://www.w3.org/2000/svg width={24 height={24 fill=" none viewBox="0 0 24 24"
+            className="w-7 h-7 text-gray-800 dark:text-gray-300 hover:dark:text-red-500 [transition:color_0.5s_ease-in-out]" aria-hidden='true' xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill={"none"} viewBox="0 0 24 24"
           >
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
             />
           </svg>
+         {(!cart.length<1) ? <span className='bg-red-500 text-[0.7em] font-semibold flex justify-center items-center text-gray-50 h-[20px] w-[20px] rounded-[50%] absolute top-0 right-0'>{cart.length}</span> : null}
         </Link>
       </div>
     </div>
