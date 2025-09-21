@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
-.main-div::-webkit-scrollbar {
-    width: 10px;
+.main-div::-webkit-scrollbar {  
+    @apply w-[0px] sm:w-[7px] 
 }
 
 .main-div::-webkit-scrollbar-track {
@@ -14,7 +14,7 @@
 }
 
 .main-div::-webkit-scrollbar-thumb:hover {
-    background: #4c5b73;
+    background: #707070;
 }
 
 .social-links {
