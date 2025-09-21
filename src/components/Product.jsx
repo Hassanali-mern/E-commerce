@@ -1,8 +1,8 @@
-import React, { useContext, useRef, useState } from 'react'
+import React, { memo, useContext, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { CartContext } from '../context/CartContext'
 
-const Product = ({ product }) => {
+const Product = memo(({ product }) => {
 
   const { cart, setCart } = useContext(CartContext)
 
@@ -41,6 +41,6 @@ const Product = ({ product }) => {
       }
     </>
   )
-}
+})
 
 export default Product

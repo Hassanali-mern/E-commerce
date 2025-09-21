@@ -1,17 +1,17 @@
-import React, { useContext, useReducer, useRef } from 'react'
+import React, { memo, useContext, useReducer, useRef } from 'react'
 import TopHeading from '../components/TopHeading'
 import { Link } from 'react-router'
 import { auth } from '../firebase/firebaseConfig'
 import { signInWithEmailAndPassword } from "firebase/auth";
-import {AuthContext} from '../context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 
-const Login = () => {
+const Login = memo(() => {
 
   let passInp = useRef(null)
   let emailInp = useRef(null)
 
-  let {user} = useContext(AuthContext)
+  let { user } = useContext(AuthContext)
 
   console.log(user)
 
@@ -65,6 +65,6 @@ const Login = () => {
       </div>
     </>
   )
-}
+})
 
 export default Login

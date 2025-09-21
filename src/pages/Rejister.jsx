@@ -1,10 +1,10 @@
-import React, { useRef } from 'react'
+import React, { memo, useRef } from 'react'
 import TopHeading from '../components/TopHeading'
 import { Link } from 'react-router'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase/firebaseConfig'
 
-const Rejister = () => {
+const Rejister = memo(() => {
 
   let passInp = useRef(null)
   let emailInp = useRef(null)
@@ -59,6 +59,6 @@ const Rejister = () => {
       </div>
     </>
   )
-}
+})
 
 export default Rejister
