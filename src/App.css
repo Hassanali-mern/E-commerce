@@ -25,6 +25,10 @@
     @apply text-[1.1em] text-gray-50 font-semibold hover:text-red-500 [transition:color_0.5s_ease-in-out]
 }
 
+.toggle-nav-option {
+    @apply text-[1.2em] text-gray-50 font-semibold py-[10px] px-[25px] border-b-[1px] border-neutral-800
+}
+
 .product-div:hover .add-btn {
     @apply opacity-100 visible [transition:all_0.5s_ease-in-out]
 }

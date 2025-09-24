@@ -1,18 +1,24 @@
-import React, { useContext } from 'react'  
+import React from 'react'
 import Header from '../components/Header'
 import Section1 from '../components/Section1'
 import Section2 from '../components/Section2'
 import FpSection from '../components/FpSection'
+import ToggleNav from '../components/ToggleNav'
+
 
 const Landingpage = () => {
 
 
+
   return (
     <div >
-        <Header />
-        <Section1/>
-        <Section2/>
-        <FpSection/>
+      <Header />
+      <div className='relative'>
+        <ToggleNav />
+      </div>
+      <Section1 />
+      <Section2 />
+      <FpSection />
     </div>
   )
 }

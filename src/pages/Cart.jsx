@@ -1,10 +1,14 @@
 import React from 'react'
 import Header from '../components/Header'
+import ToggleNav from '../components/ToggleNav'
 
 const Cart = () => {
   return (
     <div>
-      <Header/>
+      <Header />
+      <div className='relative'>
+        <ToggleNav />
+      </div>
     </div>
   )
 }

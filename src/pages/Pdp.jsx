@@ -3,17 +3,21 @@ import Header from '../components/Header'
 import { useParams } from 'react-router'
 import axios from 'axios'
 import { ProductsContext } from '../context/ProductsContext'
+import ToggleNav from '../components/ToggleNav'
 
 const Pdp = () => {
 
-  let {id}  = useParams()
-  let {products} = useContext(ProductsContext)
+  let { id } = useParams()
+  let { products } = useContext(ProductsContext)
   console.log(products)
   let product = products[+id - 1]
 
   return (
     <div>
       <Header />
+      <div className='relative'>
+        <ToggleNav />
+      </div>
       <div className='h-[700px] w-full text-gray-50'>
         <div className=''>
 

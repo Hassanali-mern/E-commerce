@@ -1,14 +1,21 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router'
 import { CartContext } from '../context/CartContext'
+import { NavContext } from '../context/NavContext'
 
 const Nav = () => {
 
   const { cart } = useContext(CartContext)
+  const { isToggle, setIsToggle } = useContext(NavContext)
+
+
+  let showNav = () => {
+    setIsToggle(!isToggle)
+  }
 
 
   return (
-    <div className='h-[100%] lg:h-[70%] w-[100%] max-w-[1400px] flex justify-center  '>
+    <div className='h-[80px] lg:h-[70%] w-[100%] max-w-[1400px] flex justify-center  '>
       <div className='h-[100%] w-[25%] lg:w-[20%] hidden lg:flex gap-5 items-center justify-center'>
         <>
           <svg
@@ -41,11 +48,19 @@ const Nav = () => {
           </svg>
         </>
 
- 
+
       </div>
-      <div className=' w-[30%] md:w-[15%] lg:w-0 lg:hidden flex items-center justify-center'>
-        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#D9D9D9"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
-      </div>
+      <button
+        onClick={showNav}
+        className=' w-[30%] md:w-[15%] lg:w-0 lg:hidden flex items-center justify-center outline-0'>
+        {isToggle ?
+
+          <svg className="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"> <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18 17.94 6M18 18 6.06 6" /> </svg>
+          :
+          <svg className="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" > <path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M5 7h14M5 12h14M5 17h14" />   </svg>
+
+        }
+      </button>
       <div className='h-[100%] w-[60%] sm:w-[70%] lg:w-[60%] flex flex-col justify-center items-center box-border'>
         <Link to={'/'}>
           <h1 className="text-gray-50 text-[1.6em] sm:text-[2em] text-center text-wrap lg:text-[3em] font-bold hover:text-red-500 [transition:color_0.5s_ease-in-out]">
@@ -83,7 +98,7 @@ const Nav = () => {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
             />
           </svg>
-         {(!cart.length<1) ? <span className='bg-red-500 text-[0.7em] font-semibold flex justify-center items-center text-gray-50 h-[20px] w-[20px] rounded-[50%] absolute top-0 right-0'>{cart.length}</span> : null}
+          {(!cart.length < 1) ? <span className='bg-red-500 text-[0.7em] font-semibold flex justify-center items-center text-gray-50 h-[20px] w-[20px] rounded-[50%] absolute top-0 right-0'>{cart.length}</span> : null}
         </Link>
       </div>
     </div>
