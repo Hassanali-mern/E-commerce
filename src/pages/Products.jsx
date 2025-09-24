@@ -7,6 +7,7 @@ import { ProductsContext } from '../context/ProductsContext'
 const Products = () => {
 
     let { products } = useContext(ProductsContext)
+    console.log(products)
 
 
 
@@ -18,7 +19,7 @@ const Products = () => {
 
                     <div className='w-full max-w-[1400px]  p-[20px] flex gap-10 flex-wrap justify-center'>
                         {products?.map((item) =>
-                            <Product product={item} key={item.id} />
+                            <Product product={item} key={item.id} height='400' width='350'/>
                         )}
                     </div>
                 </div>

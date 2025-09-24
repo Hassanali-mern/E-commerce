@@ -14,7 +14,10 @@ const Pdp = () => {
   return (
     <div>
       <Header />
-      <div className='text-gray-50'>
+      <div className='h-[700px] w-full text-gray-50'>
+        <div className=''>
+
+        </div>
         <h1 className='text-[3em] text-center'>{product?.title}</h1>
       </div>
     </div>
