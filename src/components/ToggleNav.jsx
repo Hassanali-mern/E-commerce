@@ -6,12 +6,12 @@ import SearchBox from './SearchBox'
 const ToggleNav = () => {
     const { isToggle, setIsToggle } = useContext(NavContext)
     console.log(isToggle)
-
+    let translate = isToggle ? "0" : "-100%"
 
     return (
 
         <>
-            <div className={`w-full h-[340px] flex flex-col translate-x-[${!isToggle?'-100%':'0'}] [transition:all_0.4s_ease-in-out] absolute top-0 left-0 bg-black z-1 border-t-[1px] border-neutral-700`} >
+            <div className={`w-full h-[340px] flex flex-col translate-x-[${translate}] [transition:all_0.4s_ease-in-out] absolute top-0 left-0 bg-black z-1 border-t-[1px] border-neutral-700`} >
                 <ul className='flex flex-col list-none'>
                     <li className='toggle-nav-option'>
                         <Link to={'/'} onClick={() => { setIsToggle(!isToggle) }}>Home</Link>

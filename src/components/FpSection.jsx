@@ -23,7 +23,7 @@ const FpSection = memo(() => {
     return (
         <div className='flex flex-col items-center'>
 
-            <div className='h-[70%] min-h-[110px] w-full flex flex-col justify-end items-center text-gray-50 p-[10px] box-border'>
+            <div className='h-[110px] w-full flex flex-col justify-end items-center text-gray-50  p-[10px] box-border'>
                 <div className='flex gap-2'>
                     <span>_________</span>
                     <span className='text-[1.2em] font-semibold text-gray-300 text-center'>All Styles in This Spring </span>
@@ -31,7 +31,7 @@ const FpSection = memo(() => {
                 </div>
                 <h2 className='text-[2em] lg:text-[2.5em] text-gray-50 font-bold uppercase text-center'>Feature Prodects</h2>
             </div>
-            <div className='h-[500px] w-full max-w-[1550px] flex gap-10 flex-wrap justify-center  p-[25px] '>
+            <div className='h-auto w-full max-w-[1550px] flex gap-10 flex-wrap justify-center  p-[25px] box-border'>
                 {featured?.length > 0 ? featured?.map((product, i) => (
                     <Product product={product} key={i} />
                 )) :
