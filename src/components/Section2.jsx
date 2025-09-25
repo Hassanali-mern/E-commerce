@@ -11,7 +11,7 @@ const Section2 = () => {
                     <p className='text-gray-50 text-[1.1em] font-semibold'>View Collection</p>
                 </div>
                 <div className='h-[50%] w-[100%] flex flex-col gap-3 justify-center items-start bg-[url(/images/collection-dark-2.jpg)] bg-no-repeat bg-right bg-cover  bg-neutral-900 box-border p-[20px]'>
-                    <h1 className='text-gray-50 text-[2em] lg:text-[2.5em] font-bold w-[260px]'>Electronics</h1>
+                    <h1 className='text-gray-50 text-[2em] lg:text-[2.5em] font-bold w-[260px]'>Sportswear</h1>
                     <p className='text-gray-50 text-[1.1em] font-semibold'>View Collection</p>
                 </div>
             </div>
