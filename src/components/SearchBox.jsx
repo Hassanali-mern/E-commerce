@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchBox = () => {
     return (
-        <div className='h-[100px] w-full lg:w-[300px] flex justify-center items-center border-[1px]  border-neutral-700'>
+        <div className='h-[80px] w-full lg:w-[300px] flex justify-center items-center border-[1px] border-neutral-700'>
             <div className='flex justify-between h-[60%] w-[90%] border-neutral-700 border-[1px]'>
                 <input
                 className='h-full  w-[90%] text-[1.1em] text-gray-50 p-[10px] outline-0'

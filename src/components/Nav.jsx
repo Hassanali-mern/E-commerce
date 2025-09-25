@@ -50,17 +50,17 @@ const Nav = () => {
 
 
       </div>
-      <button
-        onClick={showNav}
-        className=' w-[30%] md:w-[15%] lg:w-0 lg:hidden flex items-center justify-center outline-0'>
-        {isToggle ?
+      <div className=' w-[30%] md:w-[15%] lg:w-0 lg:hidden flex items-center justify-center outline-0'>
+        <button onClick={showNav} className='h-[40px] w-[40px]'>
+          {isToggle ?
 
-          <svg className="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"> <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18 17.94 6M18 18 6.06 6" /> </svg>
-          :
-          <svg className="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" > <path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M5 7h14M5 12h14M5 17h14" />   </svg>
+            <svg className="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24"> <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18 17.94 6M18 18 6.06 6" /> </svg>
+            :
+            <svg className="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24" > <path stroke="currentColor" strokeLinecap="round" strokeWidth={2} d="M5 7h14M5 12h14M5 17h14" />   </svg>
 
-        }
-      </button>
+          }
+        </button>
+      </div>
       <div className='h-[100%] w-[60%] sm:w-[70%] lg:w-[60%] flex flex-col justify-center items-center box-border'>
         <Link to={'/'}>
           <h1 className="text-gray-50 text-[1.6em] sm:text-[2em] text-center text-wrap lg:text-[3em] font-bold hover:text-red-500 [transition:color_0.5s_ease-in-out]">
