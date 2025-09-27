@@ -26,7 +26,7 @@
 }
 
 .toggle-nav-option {
-    @apply text-[1.2em] text-gray-50 font-semibold py-[10px] px-[25px] border-b-[1px] border-neutral-800
+    @apply text-[1.2em] text-gray-50 font-semibold py-[10px] px-[25px] border-b-[1px] border-neutral-900
 }
 
 .product-div:hover .add-btn {

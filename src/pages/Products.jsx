@@ -8,7 +8,6 @@ import ToggleNav from '../components/ToggleNav'
 const Products = () => {
 
     let { products } = useContext(ProductsContext)
-    console.log(products)
 
 
 

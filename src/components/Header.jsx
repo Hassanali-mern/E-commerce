@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
 import SecNav from './SecNav'
-import ToggleNav from './ToggleNav'
 
 const Header = () => {
     return (

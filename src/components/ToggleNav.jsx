@@ -5,8 +5,6 @@ import SearchBox from './SearchBox'
 
 const ToggleNav = () => {
     const { isToggle, setIsToggle } = useContext(NavContext)
-    console.log(isToggle)
-    // let translate = isToggle ? "0" : "-100%"
 
     return (
 
