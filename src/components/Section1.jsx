@@ -15,7 +15,7 @@ const Section1 = () => {
                             <p className='flex items-center gap-2'><span>_______</span> <span> BAG </span> <span>_______</span></p>
                         </div>
                         <h2 className='text-[2.5em] text-center md:text-right md:text-[3.5em] lg:text-[5em] text-shadow-lg/30 text-shadow-black font-semibold 2xl:font-bold'>WINTER 2025</h2>
-                        <button className='h-[50px] w-[150px] rounded-[10px] text-[1em] font-bold bg-black cursor-pointer hover:bg-red-500 [transition:background-color_0.5s_ease-in-out]'>Shop Now</button>
+                        <button className='h-[50px] w-[150px] rounded-[10px] text-[1em] bg font-bold cursor-pointer hover:bg-red-500 [transition:background-color_0.5s_ease-in-out]'>Shop Now</button>
                     </div>
                 </div>
             </div>

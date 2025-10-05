@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
 import { Link, useNavigate, useParams } from 'react-router'
 import axios from 'axios'
@@ -11,9 +11,11 @@ import Product from '../components/Product'
 
 const Pdp = () => {
 
+
   let { user, setUser } = useContext(AuthContext)
   let { cart, setCart } = useContext(CartContext)
   let navigate = useNavigate()
+  let qtInput = useRef(null)
 
   let { id } = useParams()
   let { products } = useContext(ProductsContext)
@@ -21,14 +23,19 @@ const Pdp = () => {
   let product = products[+id - 1]
 
 
-  let addToCart = (product) => {
+  let addToCart = (pid,qt) => {
     if (user) {
-      setCart([...cart, product])
-      console.log(cart)
+      if (cart.some(item => item.pid === pid)) {
+        setCart([...cart.filter(item => item.pid !== pid),{pid:pid,qt:qt}])
+      } else {
+        setCart([...cart, { pid: pid, qt:qt }])
+      }
     } else {
       navigate('/auth')
     }
   }
+
+  console.log(cart)
 
   return (
     <div >
@@ -47,23 +54,23 @@ const Pdp = () => {
               <div className='flex flex-col gap-5'>
                 <div className='flex flex-col gap-2'>
                   <h2 className='text-[1.7em] md:text-[2em] font-semibold'>{product?.title}</h2>
-                  <p className='text-neutral-400 text-[1.1em] font-semibold'>{`$${product?.price}`}</p>
+                  <p className='text-neutral-400  text-[1.4em] font-semibold'>{`$${product?.price}`}</p>
                 </div>
                 <div className='flex gap-5'>
-                  <input defaultValue={1} className='w-[70px] p-[10px] outline-0 border-[1px] text-[1.1em]  border-neutral-600' type="number" />
-                  <button onClick={() => { addToCart(product) }} className='h-[50px] w-[160px] font-bold rounded-[5px] bg-neutral-200 text-black text-[1.1em] cursor-pointer' >Add To Cart</button>
+                  <input ref={qtInput} defaultValue={1} className='w-[70px] p-[10px] outline-0 border-[1px] text-[1.1em]  border-neutral-600' type="number" />
+                  <button onClick={() => { addToCart(product.id,+qtInput.current.value) }} className='h-[50px] w-[160px] font-bold rounded-[5px] bg-neutral-100 text-black text-[1.1em] cursor-pointer' >Add To Cart</button>
                 </div>
               </div>
               <p className='text-[1em] font-semibold'>Catagories <Link to={'/'} className='text-red-500 '> Clothing Feature Products</Link></p>
               <p className='text-[1.1em] md:text-[1.3em] overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:7] [-webkit-box-orient:vertical] '>{product?.description}</p>
             </div>
           </div>
-          <div className='h-auto w-full p-[30px] box flex flex-col gap-10'>
+          <div className='h-auto w-full p-[15px] md:p-[30px] box flex flex-col gap-10'>
             <h2 className='text-[2em] font-bold'>Related Products</h2>
             <div className='flex flex-wrap justify-center gap-5 w-full'>
-              {products.filter((item) => item.category === product.category).map((product) =>
-                <Product product={product}/>
-            )}
+              {products.filter((item) => item.category === product.category).map((product, i) =>
+                <Product product={product} key={i} />
+              )}
             </div>
           </div>
         </div>

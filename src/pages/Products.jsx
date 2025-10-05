@@ -4,13 +4,14 @@ import Header from '../components/Header'
 import Product from '../components/Product'
 import { ProductsContext } from '../context/ProductsContext'
 import ToggleNav from '../components/ToggleNav'
+import { CartContext } from '../context/CartContext'
 
 const Products = () => {
 
     let { products } = useContext(ProductsContext)
+    let { cart, setCart } = useContext(CartContext)
 
-
-
+    console.log(cart)
     return (
         <>
             <div>

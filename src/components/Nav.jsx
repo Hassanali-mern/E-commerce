@@ -1,13 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router'
 import { CartContext } from '../context/CartContext'
 import { NavContext } from '../context/NavContext'
+import { ThemeContext } from '../context/ThemeContext'
 
 const Nav = () => {
 
   const { cart } = useContext(CartContext)
   const { isToggle, setIsToggle } = useContext(NavContext)
+  const { theme, setTheme } = useContext(ThemeContext)
+  let [isDark, setIsDark] = useState(true)
 
+  console.log(theme)
 
   let showNav = () => {
     setIsToggle(!isToggle)
@@ -15,7 +19,7 @@ const Nav = () => {
 
 
   return (
-    <div className='h-[80px] lg:h-[70%] w-[100%] max-w-[1400px] flex justify-center  '>
+    <div className='h-[80px] lg:h-[70%] w-[100%] max-w-[1400px] flex justify-center '>
       <div className='h-[100%] w-[25%] lg:w-[20%] hidden lg:flex gap-5 items-center justify-center'>
         <>
           <svg
@@ -62,7 +66,7 @@ const Nav = () => {
         </button>
       </div>
       <div className='h-[100%] w-[60%] sm:w-[70%] lg:w-[60%] flex flex-col justify-center items-center box-border'>
-        <Link to={'/'}>
+        <Link to={'/'} className='flex gap-2 items-center'>
           <h1 className="text-gray-50 text-[1.6em] sm:text-[2em] text-center text-wrap lg:text-[3em] font-bold hover:text-red-500 [transition:color_0.5s_ease-in-out]">
             Aurelia Mart
           </h1>
@@ -98,8 +102,19 @@ const Nav = () => {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
             />
           </svg>
-          {(!cart.length < 1) ? <span className='bg-red-500 text-[0.7em] font-semibold flex justify-center items-center text-gray-50 h-[20px] w-[20px] rounded-[50%] absolute top-0 right-0'>{cart.length}</span> : null}
+          {(cart.length > 0) ? <span className='bg-red-500 text-[0.7em] font-semibold flex justify-center items-center text-gray-50 h-[20px] w-[20px] rounded-[50%] absolute top-0 right-0'>{cart.length}</span> : null}
         </Link>
+        <button onClick={() => { setIsDark(!isDark), setTheme(isDark?'light':'dark') }} className='relative h-[40px] w-[40px] flex items-center cursor-pointer'>
+          {isDark ?
+            <svg class="w-7 h-7 text-gray-800 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5V3m0 18v-2M7.05 7.05 5.636 5.636m12.728 12.728L16.95 16.95M5 12H3m18 0h-2M7.05 16.95l-1.414 1.414M18.364 5.636 16.95 7.05M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
+            </svg>
+            :
+            <svg class="w-7 h-7 text-gray-800 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" />
+            </svg>
+          }
+        </button>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
-.main-div::-webkit-scrollbar {  
-    @apply w-[0px] sm:w-[7px] 
+.main-div::-webkit-scrollbar {
+    @apply w-[0px] sm:w-[7px]
 }
 
 .main-div::-webkit-scrollbar-track {
@@ -41,6 +41,12 @@
     @apply text-red-500 [transition:all_0.5s_ease-in-out]
 }
 
-.input{
+.input {
     @apply h-[55px] w-full font-semibold tracking-wide text-[1.2em] outline-0 border-[1px] border-neutral-600 px-[20px] rounded-[10px]
+}
+
+@layer components {
+    .bg {
+        @apply bg-white dark:bg-black
+    }
 }

@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 
-const ThemeContext = () => {
+export const ThemeContext = createContext()
+
+const ThemeContextPovider = ({ children }) => {
+
+  let [theme, setTheme] = useState('light') ;
+
+
+
   return (
-    <div>ThemeContext</div>
+    <ThemeContext value={{theme,setTheme}}>
+      {children}
+    </ThemeContext>
   )
 }
 
-export default ThemeContext
+export default ThemeContextPovider

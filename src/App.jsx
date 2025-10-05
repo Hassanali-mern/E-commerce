@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <div className='h-[100vh] w-[100vw] bg-black overflow-y-auto main-div'>
+      <div className='h-[100vh] w-[100vw] bg-black overflow-y-auto main-div '>
         <Routes>
           <Route path='/' element={<Landingpage />} />
           {(!user) ?
