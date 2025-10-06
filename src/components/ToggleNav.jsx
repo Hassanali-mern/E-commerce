@@ -9,7 +9,7 @@ const ToggleNav = () => {
     return (
 
         <>
-            <div className={`w-full h-[340px] flex flex-col transform ${isToggle ? 'translate-x-0':'-translate-x-[100%]'} [transition:all_0.4s_ease-in-out] absolute top-0 left-0 bg-black z-1 border-t-[1px] border-neutral-700`} >
+            <div className={`w-full h-[340px] flex flex-col transform ${isToggle ? 'translate-x-0':'-translate-x-[100%]'} [transition:all_0.4s_ease-in-out] absolute top-0 left-0 bg-white dark:bg-black z-1 border-t-[1px] border-neutral-700`} >
                 <ul className='flex flex-col list-none'>
                     <li className='toggle-nav-option'>
                         <Link to={'/'} onClick={() => { setIsToggle(!isToggle) }}>Home</Link>

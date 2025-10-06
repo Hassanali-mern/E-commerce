@@ -43,22 +43,22 @@ const Pdp = () => {
       <div className='relative'>
         <ToggleNav />
       </div>
-      <div className='w-full  flex flex-col items-center  text-gray-50'>
+      <div className='w-full  flex flex-col items-center  text-black dark:text-gray-50'>
         <div className='w-full  max-w-[1400px]'>
 
           <div className='h-auto lg:h-[550px] w-full lg:flex lg:flex-row flex-col  py-[15px] lg:p-[30px] box-border overflow-hidden'>
-            <div className='h-[300px] lg:h-auto w-full lg:w-[40%] flex justify-center items-center  bg-neutral-900 overflow-hidden'>
+            <div className='h-[300px] lg:h-auto w-full lg:w-[40%] flex justify-center items-center bg-neutral-200 dark:bg-neutral-900 overflow-hidden'>
               <img className='h-[80%]' src={product?.image} />
             </div>
             <div className='w-full lg:w-[60%] flex flex-col gap-7 px-[12px] py-[7px]  lg:px-[30px]' >
               <div className='flex flex-col gap-5'>
                 <div className='flex flex-col gap-2'>
                   <h2 className='text-[1.7em] md:text-[2em] font-semibold'>{product?.title}</h2>
-                  <p className='text-neutral-400  text-[1.4em] font-semibold'>{`$${product?.price}`}</p>
+                  <p className='text-neutral-700 dark:text-neutral-400  text-[1.4em] font-semibold'>{`$${product?.price}`}</p>
                 </div>
                 <div className='flex gap-5'>
                   <input ref={qtInput} defaultValue={1} className='w-[70px] p-[10px] outline-0 border-[1px] text-[1.1em]  border-neutral-600' type="number" />
-                  <button onClick={() => { addToCart(product.id,+qtInput.current.value) }} className='h-[50px] w-[160px] font-bold rounded-[5px] bg-neutral-100 text-black text-[1.1em] cursor-pointer' >Add To Cart</button>
+                  <button onClick={() => { addToCart(product.id,+qtInput.current.value) }} className='h-[50px] w-[160px] font-bold rounded-[5px] bg-black dark:bg-neutral-100 text-neutral-50 dark:text-black text-[1.1em] cursor-pointer' >Add To Cart</button>
                 </div>
               </div>
               <p className='text-[1em] font-semibold'>Catagories <Link to={'/'} className='text-red-500 '> Clothing Feature Products</Link></p>

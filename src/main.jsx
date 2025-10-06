@@ -10,6 +10,7 @@ import NavContextProvider from './context/NavContext.jsx'
 import ThemeContextProvider from './context/ThemeContext.jsx'
 
 createRoot(document.getElementById('root')).render(
+
   <StrictMode>
     <AuthContextProvider>
       <ThemeContextProvider>

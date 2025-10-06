@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .main-div::-webkit-scrollbar {
     @apply w-[0px] sm:w-[7px]
 }
@@ -22,11 +24,11 @@
 }
 
 .nav-option {
-    @apply text-[1.1em] text-gray-50 font-semibold hover:text-red-500 [transition:color_0.5s_ease-in-out]
+    @apply text-[1.1em] text-black dark:text-gray-50 font-semibold hover:text-red-500 [transition:color_0.5s_ease-in-out]
 }
 
 .toggle-nav-option {
-    @apply text-[1.2em] text-gray-50 font-semibold py-[10px] px-[25px] border-b-[1px] border-neutral-900
+    @apply text-[1.2em] text-black dark:text-gray-50 font-semibold py-[10px] px-[25px] border-b-[1px] border-neutral-900
 }
 
 .product-div:hover .add-btn {

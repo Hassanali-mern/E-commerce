@@ -38,7 +38,7 @@ const Login = memo(() => {
       <TopHeading heading={'Sign in'} />
 
       <div className='w-full h-[700px] flex justify-start p-[10px]  md:p-[30px]'>
-        <div className='h-[600px] w-full max-w-[900px] flex flex-col gap-10 items-center md:items-start justify-center text-gray-50  rounded-[15px] box-border'>
+        <div className='h-[600px] w-full max-w-[900px] flex flex-col gap-10 items-center md:items-start justify-center text-black dark:text-gray-50  rounded-[15px] box-border'>
 
           <h2 className='text-[2.4em] lg:text-[2.7em] font-bold text-center'>Login</h2>
           <div className='h-full w-full flex flex-col gap-7 items-center md:items-start'>
@@ -57,7 +57,7 @@ const Login = memo(() => {
                 type="password" name="" id="pass-input" placeholder='Enter Your Password' />
             </div>
             <div className='flex flex-col items-center md:items-start gap-3'>
-              <button onClick={() => { loginerUser() }} className='h-[50px] w-[150px] text-[1.5em] text-black bg-gray-50 font-bold rounded-[10px] mt-8 cursor-pointer'>Login</button>
+              <button onClick={() => { loginerUser() }} className='h-[50px] w-[150px] text-[1.5em] text-neutral-50 dark:text-black bg-black dark:bg-gray-50 font-bold rounded-[10px] mt-8 cursor-pointer'>Login</button>
               <p>Dont Have Acount <Link to={'/auth/rejister'} className='text-red-400'>Sign up</Link></p>
             </div>
           </div>
