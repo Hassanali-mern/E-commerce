@@ -20,7 +20,7 @@ const Cart = () => {
         <div className='w-full flex flex-col items-center '>
           <div className='w-full max-w-[1400px] p-[15px] flex flex-col items-center'>
             <table className='border-[1px] border-neutral-800 h-auto w-full max-w-[900px] flex flex-col'>
-              <tr className='w-full flex bg-[#061817] text-neutral-50 text-[1.2em] '>
+              <tr className='w-full flex bg-[#eef2f8] dark:bg-[#061817]  text-black dark:text-neutral-50 text-[1.2em] '>
                 <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'></th>
                 <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'></th>
                 <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'>Product</th>
