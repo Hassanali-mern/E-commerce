@@ -5,6 +5,7 @@ import Section2 from '../components/Section2'
 import FpSection from '../components/FpSection'
 import ToggleNav from '../components/ToggleNav'
 import Fcsection from '../components/Fcsection'
+import SpecialSection from '../components/specialSection'
 
 
 const Landingpage = () => {
@@ -20,7 +21,8 @@ const Landingpage = () => {
       <Section1 />
       <Section2 />
       <FpSection />
-      <Fcsection/>
+      <Fcsection />
+      <SpecialSection/>
     </div>
   )
 }
