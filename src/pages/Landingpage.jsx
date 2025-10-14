@@ -7,6 +7,7 @@ import ToggleNav from '../components/ToggleNav'
 import Fcsection from '../components/Fcsection'
 import SpecialSection from '../components/SpecialSection'
 import NewArrivals from '../components/NewArrivals'
+import SubscribeSection from '../components/SubscribeSection'
 
 
 const Landingpage = () => {
@@ -25,6 +26,7 @@ const Landingpage = () => {
       <Fcsection />
       <SpecialSection/>
       <NewArrivals/>
+      <SubscribeSection/>
     </div>
   )
 }

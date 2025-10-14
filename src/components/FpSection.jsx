@@ -1,6 +1,7 @@
 import React, { memo, useContext, useState, } from 'react'
 import Product from './Product'
 import { ProductsContext } from '../context/ProductsContext'
+import { ArraySchema } from 'firebase/ai'
 
 const FpSection = memo(() => {
 
@@ -35,7 +36,7 @@ const FpSection = memo(() => {
                 {featured?.length > 0 ? featured?.map((product, i) => (
                     <Product product={product} key={i} />
                 )) :
-                    [1, 2, 3, 4].map(() => (
+                    [...Array(4)].map(() => (
                         <div className='flex flex-col items-center  gap-3 h-[400px] w-[310px] product-div '>
                             <div className='h-[75%] w-full lg:relative flex flex-col items-center justify-center bg-neutral-200 dark:bg-neutral-900 overflow-hidden'>
                             </div>

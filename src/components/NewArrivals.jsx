@@ -24,7 +24,7 @@ const NewArrivals = () => {
                         <Product product={product} />
                     ))
                         :
-                        [1, 2, 3, 4, 5, 6].map(() => (
+                        [...Array(6)].map(() => (
                             <div className='flex flex-col items-center  gap-3 h-[400px] w-[310px] product-div '>
                                 <div className='h-[75%] w-full lg:relative flex flex-col items-center justify-center bg-neutral-200 dark:bg-neutral-900 overflow-hidden'>
                                 </div>
