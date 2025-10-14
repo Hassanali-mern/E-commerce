@@ -20,10 +20,17 @@ const NewArrivals = () => {
                     <h2 className='text-[2em] lg:text-[2.5em] text-black dark:text-gray-50 font-bold uppercase text-center'>New Arrivals</h2>
                 </div>
                 <div className='flex flex-wrap justify-center gap-10'>
-                    {newArrivals.map((product) => (
+                    {newArrivals.length > 0 ? newArrivals.map((product) => (
                         <Product product={product} />
                     ))
+                        :
+                        [1, 2, 3, 4, 5, 6].map(() => {
+                            <div className='flex flex-col items-center  gap-3 h-[400px] w-[310px] product-div '>
+                                <div className='h-[75%] w-full lg:relative flex flex-col items-center justify-center bg-neutral-200 dark:bg-neutral-900 overflow-hidden'>
+                                </div>
 
+                            </div>
+                        })
                     }
                 </div>
             </div>
