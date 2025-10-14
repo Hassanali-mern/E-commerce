@@ -12,11 +12,11 @@ const FpSection = memo(() => {
     let womensArr = products.filter(p => p.category === "women's clothing");
 
     let featured = [
-        mensArr[1],        
-        jewelryArr[2],     
-        electronicsArr[3], 
-        womensArr[3]       
-    ].filter(Boolean); 
+        mensArr[1],
+        jewelryArr[2],
+        electronicsArr[3],
+        womensArr[3]
+    ].filter(Boolean);
 
     console.log(products)
 
@@ -35,7 +35,13 @@ const FpSection = memo(() => {
                 {featured?.length > 0 ? featured?.map((product, i) => (
                     <Product product={product} key={i} />
                 )) :
-                    <p>no products</p>
+                    [1, 2, 3, 4].map((product) => (
+                        <div className='flex flex-col items-center  gap-3 h-[400px] w-[310px] product-div '>
+                            <div className='h-[75%] w-full lg:relative flex flex-col items-center justify-center bg-neutral-200 dark:bg-neutral-900 overflow-hidden'>
+                            </div>
+
+                        </div>
+                    ))
                 }
             </div>
         </div>
