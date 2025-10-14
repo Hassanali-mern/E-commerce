@@ -5,7 +5,7 @@ import Section2 from '../components/Section2'
 import FpSection from '../components/FpSection'
 import ToggleNav from '../components/ToggleNav'
 import Fcsection from '../components/Fcsection'
-import SpecialSection from '../components/specialSection'
+import SpecialSection from '../components/SpecialSection'
 import NewArrivals from '../components/NewArrivals'
 
 
