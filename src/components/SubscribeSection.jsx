@@ -18,7 +18,7 @@ const SubscribeSection = () => {
           </div>
           <div className='flex flex-col gap-10 items-center'>
             <p className='text-[1.5em] text-gray-600'>Sign up now for 10% discount on first order.</p>
-            <input className='h-[50px] w-[300px] outline-0 bg-white dark:bg-black dark:text-gray-50 px-[20px] text-[1.2em]' type="text" placeholder='Enter Your Email Address' />
+            <input className='h-[50px] w-[300px] outline-0 bg-white text-black dark:bg-black dark:text-gray-50 px-[20px] text-[1.2em]' type="text" placeholder='Enter Your Email Address' />
             <button className='h-[50px] w-[150px] rounded-[10px] text-[1em] text-gray-50 bg-black dark:bg-gray-200 dark:text-black font-bold cursor-pointer hover:bg-red-500 hover:text-neutral-50 [transition:all_0.5s_ease-in-out]'>Shop Now</button>
           </div>
         </div>
