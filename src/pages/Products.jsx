@@ -5,6 +5,9 @@ import Product from '../components/Product'
 import { ProductsContext } from '../context/ProductsContext'
 import ToggleNav from '../components/ToggleNav'
 import { CartContext } from '../context/CartContext'
+import SubscribeSection from '../components/SubscribeSection'
+import Footer from '../components/Footer'
+import InstagramHeading from '../components/InstagramHeading'
 
 const Products = () => {
 
@@ -21,7 +24,7 @@ const Products = () => {
                 </div>
                 <div className='w-full flex justify-center ' >
 
-                    <div className='w-full max-w-[1400px]  p-[20px] flex gap-10 flex-wrap justify-center'>
+                    <div className='w-full max-w-[1400px]  py-[30px] px-[20px] flex gap-10 flex-wrap justify-center'>
                         {products.length > 0 ? products?.map((item) =>
                             <Product product={item} key={item.id} />
                         )
@@ -36,6 +39,9 @@ const Products = () => {
                         }
                     </div>
                 </div>
+                <SubscribeSection/>
+                <InstagramHeading/>
+                <Footer/>
             </div>
         </>
     )

@@ -9,6 +9,8 @@ import SpecialSection from '../components/SpecialSection'
 import NewArrivals from '../components/NewArrivals'
 import SubscribeSection from '../components/SubscribeSection'
 import BlogSection from '../components/BlogSection'
+import Footer from '../components/Footer'
+import InstagramHeading from '../components/InstagramHeading'
 
 
 const Landingpage = () => {
@@ -29,7 +31,7 @@ const Landingpage = () => {
       <NewArrivals />
       <SubscribeSection />
       <BlogSection />
-      <div className=' h-[400px] w-full flex justify-center'>
+      <div className=' h-auto md:h-[400px] w-full flex justify-center'>
         <div className='h-full w-full max-w-[1400px] flex flex-wrap justify-center items-center gap-10 px-[20px] py-[30px]'>
           <div className='h-[220px] w-[300px] lg:w-[400px] flex flex-col gap-2 justify-center items-center border-gray-300 dark:border-gray-800 border-[1px]'>
             <img src="/images/free-shipping.png" alt="free shiping" />
@@ -49,6 +51,8 @@ const Landingpage = () => {
         </div>
 
       </div>
+      <InstagramHeading/>
+      <Footer />
     </div>
   )
 }

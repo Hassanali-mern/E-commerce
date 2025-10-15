@@ -2,7 +2,7 @@ import React from 'react'
 
 const SubscribeSection = () => {
   return (
-    <div className='h-[1500px] md:h-[750px] w-full flex justify-center'>
+    <div className='h-[1500px] md:h-[750px] w-full flex justify-center '>
       <div className='h-full w-full max-w-[1400px] flex flex-col md:flex-row px-[20px] py-[30px]'>
         <div className='h-[50%] md:h-full w-full md:w-[50%] bg-[url(/images/subscribe-light.webp)] dark:bg-[url(/images/subscribe-dark.webp)] bg-cover'>
 
@@ -24,8 +24,7 @@ const SubscribeSection = () => {
         </div>
 
       </div>
-
-    </div>
+      </div>
   )
 }
 
