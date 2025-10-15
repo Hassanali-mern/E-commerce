@@ -8,6 +8,7 @@ import Fcsection from '../components/Fcsection'
 import SpecialSection from '../components/SpecialSection'
 import NewArrivals from '../components/NewArrivals'
 import SubscribeSection from '../components/SubscribeSection'
+import BlogSection from '../components/BlogSection'
 
 
 const Landingpage = () => {
@@ -27,6 +28,7 @@ const Landingpage = () => {
       <SpecialSection/>
       <NewArrivals/>
       <SubscribeSection/>
+      <BlogSection/>
     </div>
   )
 }

@@ -2,8 +2,8 @@ import React from 'react'
 
 const SpecialSection = () => {
     return (
-        <div className='h-auto md:h-[700px] w-full flex justify-center py-[25px] px-[30px]'>
-            <div className='h-full w-full max-w-[1400px] flex  flex-col md:flex-row'>
+        <div className='h-auto md:h-[700px] w-full flex justify-center '>
+            <div className='h-full w-full max-w-[1400px] flex  flex-col md:flex-row py-[30px] px-[20px]'>
                 <div className='h-full w-full md:w-[50%]  flex flex-col gap-5 justify-center items-center'>
                     <div className='h-[110px] w-full flex flex-col gap-3 justify-end items-center text-black dark:text-gray-50  p-[10px] box-border'>
                         <div className='flex gap-2'>
