@@ -19,7 +19,7 @@ const BlogSection = () => {
                         <span className='text-gray-500'> July 2,2018 -</span>
                         <span className='text-gray-500'> by Sakin</span>
                     </div>
-                    <h2 className='text-[1.8em] text-center font-bold'>Sum Up Your Fashion Experience</h2>
+                    <h2 className='text-[1.8em] text-center font-bold text-black dark:text-gray-200'>Sum Up Your Fashion Experience</h2>
                     <p className='text-[1.3em] text-gray-500 text-center'>The only sign of commercial activity within the harbour, visible from the beach of the Great Isabel, is the square blunt end</p>
                     <button className='outline-0 text-[1.1em] font-semibold'>Continue Reading</button>
 
@@ -31,7 +31,7 @@ const BlogSection = () => {
                         <span className='text-gray-500'> July 2,2018 -</span>
                         <span className='text-gray-500'> by Sakin</span>
                     </div>
-                    <h2 className='text-[1.8em] text-center font-bold'>This Is Why Fashion Is So Famous!</h2>
+                    <h2 className='text-[1.8em] text-center font-bold text-black dark:text-gray-200'>This Is Why Fashion Is So Famous!</h2>
                     <p className='text-[1.3em] text-gray-500 text-center'>Human faces are very powerful. User Experience designer Aarron Walter describes in his book Designing for Emotion why we appreciate human faces</p>
                     <button className='outline-0 text-[1.1em] font-semibold'>Continue Reading</button>
 
@@ -43,7 +43,7 @@ const BlogSection = () => {
                         <span className='text-gray-500'> July 2,2018 -</span>
                         <span className='text-gray-500'> by Sakin</span>
                     </div>
-                    <h2 className='text-[1.8em] text-center font-bold'>5 Stereotypes About Fashion</h2>
+                    <h2 className='text-[1.8em] text-center font-bold text-black dark:text-gray-200'>5 Stereotypes About Fashion</h2>
                     <p className='text-[1.3em] text-gray-500 text-center'>Human faces are very powerful. User Experience designer Aarron Walter describes in his book Designing for Emotion why we appreciate human faces</p>
                     <button className='outline-0 text-[1.1em] font-semibold'>Continue Reading</button>
 
