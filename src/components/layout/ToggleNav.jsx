@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { NavContext } from '../context/NavContext'
+import { NavContext } from '../../context/NavContext'
 import { Link } from 'react-router'
-import SearchBox from './SearchBox'
+import SearchBox from '../common/SearchBox'
 
 const ToggleNav = () => {
     const { isToggle, setIsToggle } = useContext(NavContext)

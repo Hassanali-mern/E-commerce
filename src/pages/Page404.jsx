@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../components/Header'
-import SecNav from '../components/SecNav'
-import ToggleNav from '../components/ToggleNav'
+import Header from '../components/layout/Header'
+import SecNav from '../components/layout/SecNav'
+import ToggleNav from '../components/layout/ToggleNav'
 
 const Page404 = () => {
   return (

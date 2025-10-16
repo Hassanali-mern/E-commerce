@@ -1,5 +1,5 @@
 import React, { memo, useRef } from 'react'
-import TopHeading from '../components/TopHeading'
+import TopHeading from '../components/common/TopHeading'
 import { Link } from 'react-router'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase/firebaseConfig'

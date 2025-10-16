@@ -1,5 +1,5 @@
 import React, { memo, useContext, useReducer, useRef } from 'react'
-import TopHeading from '../components/TopHeading'
+import TopHeading from '../components/common/TopHeading'
 import { Link } from 'react-router'
 import { auth } from '../firebase/firebaseConfig'
 import { signInWithEmailAndPassword } from "firebase/auth";

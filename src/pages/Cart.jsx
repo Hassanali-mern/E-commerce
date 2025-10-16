@@ -1,8 +1,7 @@
 import React, { useContext } from 'react'
-import Header from '../components/Header'
-import ToggleNav from '../components/ToggleNav'
+import Header from '../components/layout/Header'
+import ToggleNav from '../components/layout/ToggleNav'
 import { CartContext } from '../context/CartContext'
-import Product from '../components/Product'
 import { ProductsContext } from '../context/ProductsContext'
 import { Link } from 'react-router'
 

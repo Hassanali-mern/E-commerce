@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from '../components/Header'
-import TopHeading from '../components/TopHeading'
+import Header from '../components/layout/Header'
+import TopHeading from '../components/layout/ToggleNav'
 import Login from './Login'
 import Rejister from './Rejister'
 import { Outlet } from 'react-router'
-import ToggleNav from '../components/ToggleNav'
+import ToggleNav from '../components/layout/ToggleNav'
 
 const Auth = () => {
   return (

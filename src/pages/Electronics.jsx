@@ -1,18 +1,18 @@
-import axios from 'axios'
-import React, { useContext, useEffect, useState } from 'react'
-import Header from '../components/layout/Header'
+import React, { useContext } from 'react'
 import Product from '../components/layout/Product'
-import { ProductsContext } from '../context/ProductsContext'
-import ToggleNav from '../components/layout/ToggleNav'
-import { CartContext } from '../context/CartContext'
 import SubscribeSection from '../components/specific/SubscribeSection'
-import Footer from '../components/layout/Footer'
 import InstagramHeading from '../components/common/InstagramHeading'
+import Footer from '../components/layout/Footer'
+import ToggleNav from '../components/layout/ToggleNav'
+import Header from '../components/layout/Header'
+import { ProductsContext } from '../context/ProductsContext'
+import { CartContext } from '../context/CartContext'
 
-const Products = () => {
-
+const Electronics = () => {
     let { products } = useContext(ProductsContext)
     let { cart, setCart } = useContext(CartContext)
+    let electronicsArr = products.filter(p => p.category === "electronics");
+
 
     console.log(cart)
     return (
@@ -25,7 +25,7 @@ const Products = () => {
                 <div className='w-full flex justify-center ' >
 
                     <div className='w-full max-w-[1400px]  py-[30px] px-[20px] flex gap-10 flex-wrap justify-center'>
-                        {products.length > 0 ? products?.map((item) =>
+                        {electronicsArr.length > 0 ? electronicsArr?.map((item) =>
                             <Product product={item} key={item.id} />
                         )
                             :
@@ -39,12 +39,12 @@ const Products = () => {
                         }
                     </div>
                 </div>
-                <SubscribeSection/>
-                <InstagramHeading/>
-                <Footer/>
+                <SubscribeSection />
+                <InstagramHeading />
+                <Footer />
             </div>
         </>
     )
 }
 
-export default Products
+export default Electronics

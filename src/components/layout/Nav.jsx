@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router'
-import { CartContext } from '../context/CartContext'
-import { NavContext } from '../context/NavContext'
-import { ThemeContext } from '../context/ThemeContext'
+import { CartContext } from '../../context/CartContext'
+import { NavContext } from '../../context/NavContext'
+import { ThemeContext } from '../../context/ThemeContext'
 
 const Nav = () => {
 

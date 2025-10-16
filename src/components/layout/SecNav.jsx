@@ -12,13 +12,13 @@ const SecNav = () => {
                 <Link to={'/products'}>All Products</Link>
             </li>
             <li className='nav-option'>
-                <Link to={'/'}>Men's Clothing</Link>
+                <Link to={'/mensclothing'}>Men's Clothing</Link>
             </li>
             <li className='nav-option'>
-                <Link to={'/'}>Electronics</Link>
+                <Link to={'/electronics'}>Electronics</Link>
             </li>
             <li className='nav-option'>
-                <Link to={'/'}>Women's Clothing</Link>
+                <Link to={'/womensclothing'}>Women's Clothing</Link>
             </li>
         </ul>
     </div>

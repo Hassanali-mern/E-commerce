@@ -1,18 +1,19 @@
-import axios from 'axios'
-import React, { useContext, useEffect, useState } from 'react'
-import Header from '../components/layout/Header'
-import Product from '../components/layout/Product'
+import React, { useContext } from 'react'
 import { ProductsContext } from '../context/ProductsContext'
-import ToggleNav from '../components/layout/ToggleNav'
 import { CartContext } from '../context/CartContext'
+import ToggleNav from '../components/layout/ToggleNav'
+import Header from '../components/layout/Header'
 import SubscribeSection from '../components/specific/SubscribeSection'
-import Footer from '../components/layout/Footer'
 import InstagramHeading from '../components/common/InstagramHeading'
+import Product from '../components/layout/Product'
+import Footer from '../components/layout/Footer'
 
-const Products = () => {
+const MensClothing = () => {
 
     let { products } = useContext(ProductsContext)
     let { cart, setCart } = useContext(CartContext)
+    let mensArr = products.filter(p => p.category === "men's clothing");
+
 
     console.log(cart)
     return (
@@ -25,7 +26,7 @@ const Products = () => {
                 <div className='w-full flex justify-center ' >
 
                     <div className='w-full max-w-[1400px]  py-[30px] px-[20px] flex gap-10 flex-wrap justify-center'>
-                        {products.length > 0 ? products?.map((item) =>
+                        {mensArr.length > 0 ? mensArr?.map((item) =>
                             <Product product={item} key={item.id} />
                         )
                             :
@@ -39,12 +40,12 @@ const Products = () => {
                         }
                     </div>
                 </div>
-                <SubscribeSection/>
-                <InstagramHeading/>
-                <Footer/>
+                <SubscribeSection />
+                <InstagramHeading />
+                <Footer />
             </div>
         </>
     )
 }
 
-export default Products
+export default MensClothing

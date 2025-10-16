@@ -1,8 +1,8 @@
 import React, { memo, useContext, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router'
-import { CartContext } from '../context/CartContext'
-import { AuthContext } from '../context/AuthContext'
-import { ProductsContext } from '../context/ProductsContext'
+import { CartContext } from '../../context/CartContext'
+import { AuthContext } from '../../context/AuthContext'
+import { ProductsContext } from '../../context/ProductsContext'
 
 const Product = memo(({ product }) => {
 

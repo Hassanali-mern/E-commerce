@@ -1,6 +1,6 @@
 import React, { memo, useContext, useState, } from 'react'
-import Product from './Product'
-import { ProductsContext } from '../context/ProductsContext'
+import Product from '../layout/Product'
+import { ProductsContext } from '../../context/ProductsContext'
 import { ArraySchema } from 'firebase/ai'
 
 const FpSection = memo(() => {

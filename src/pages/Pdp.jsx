@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import Header from '../components/Header'
+import Header from '../components/layout/Header'
 import { Link, useNavigate, useParams } from 'react-router'
 import axios from 'axios'
 import { ProductsContext } from '../context/ProductsContext'
-import ToggleNav from '../components/ToggleNav'
-import TopHeading from '../components/TopHeading'
+import ToggleNav from '../components/layout/ToggleNav'
+import TopHeading from '../components/common/TopHeading'
 import { CartContext } from '../context/CartContext'
 import { AuthContext } from '../context/AuthContext'
-import Product from '../components/Product'
+import Product from '../components/layout/Product'
 
 const Pdp = () => {
 

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { ProductsContext } from '../context/ProductsContext'
-import { CartContext } from '../context/CartContext'
-import Product from './Product'
+import { ProductsContext } from '../../context/ProductsContext'
+import { CartContext } from '../../context/CartContext'
+import Product from '../layout/Product'
 
 const NewArrivals = () => {
     let { products } = useContext(ProductsContext)

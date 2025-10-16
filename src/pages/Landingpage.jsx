@@ -1,16 +1,16 @@
 import React from 'react'
-import Header from '../components/Header'
-import Section1 from '../components/Section1'
-import Section2 from '../components/Section2'
-import FpSection from '../components/FpSection'
-import ToggleNav from '../components/ToggleNav'
-import Fcsection from '../components/Fcsection'
-import SpecialSection from '../components/SpecialSection'
-import NewArrivals from '../components/NewArrivals'
-import SubscribeSection from '../components/SubscribeSection'
-import BlogSection from '../components/BlogSection'
-import Footer from '../components/Footer'
-import InstagramHeading from '../components/InstagramHeading'
+import Header from '../components/layout/Header'
+import Section1 from '../components/specific/Section1'
+import Section2 from '../components/specific/Section2'
+import FpSection from '../components/specific/FpSection'
+import ToggleNav from '../components/layout/ToggleNav'
+import Fcsection from '../components/specific/Fcsection'
+import SpecialSection from '../components/specific/SpecialSection'
+import NewArrivals from '../components/specific/NewArrivals'
+import SubscribeSection from '../components/specific/SubscribeSection'
+import BlogSection from '../components/specific/BlogSection'
+import Footer from '../components/layout/Footer'
+import InstagramHeading from '../components/common/InstagramHeading'
 
 
 const Landingpage = () => {
@@ -31,25 +31,24 @@ const Landingpage = () => {
       <NewArrivals />
       <SubscribeSection />
       <BlogSection />
-      <div className=' h-auto md:h-[400px] w-full flex justify-center'>
+      <div className=' h-auto w-full flex justify-center py-[30px] px-[20px]'>
         <div className='h-full w-full max-w-[1400px] flex flex-wrap justify-center items-center gap-10 px-[20px] py-[30px]'>
-          <div className='h-[220px] w-[300px] lg:w-[400px] flex flex-col gap-2 justify-center items-center border-gray-300 dark:border-gray-800 border-[1px]'>
+          <div className='h-[220px] w-[350px] lg:w-[400px] flex flex-col gap-2 justify-center items-center border-gray-300 dark:border-gray-800 border-[1px]'>
             <img src="/images/free-shipping.png" alt="free shiping" />
             <h3 className='text-[1.6em] text-black dark:text-gray-200 font-bold uppercase'>Free Shipping</h3>
             <p className='text-[1.1em] text-gray-500'>on all orders over $49.00</p>
           </div>
-          <div className='h-[220px] w-[300px] lg:w-[400px] flex flex-col gap-2 justify-center items-center border-gray-300 dark:border-gray-800 border-[1px]'>
+          <div className='h-[220px] w-[350px] lg:w-[400px] flex flex-col gap-2 justify-center items-center border-gray-300 dark:border-gray-800 border-[1px]'>
             <img src="/images/return.png" alt="15 days returns" />
             <h3 className='text-[1.6em] text-black dark:text-gray-200 font-bold uppercase'>15 Days Returns</h3>
             <p className='text-[1.1em] text-gray-500'>moneyback guarantee</p>
           </div>
-          <div className='h-[220px] w-[300px] lg:w-[400px] flex flex-col gap-2 justify-center items-center border-gray-300 dark:border-gray-800 border-[1px]'>
+          <div className='h-[220px] w-[350px] lg:w-[400px] flex flex-col gap-2 justify-center items-center border-gray-300 dark:border-gray-800 border-[1px]'>
             <img src="/images/secure.png" alt="secure checkout" />
             <h3 className='text-[1.6em] text-black dark:text-gray-200 font-bold uppercase'>Secure Checkout</h3>
             <p className='text-[1.1em] text-gray-500'>100% protected by Paypal</p>
           </div>
         </div>
-
       </div>
       <InstagramHeading/>
       <Footer />
