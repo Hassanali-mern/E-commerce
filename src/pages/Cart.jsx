@@ -18,39 +18,43 @@ const Cart = () => {
         <ToggleNav />
         <div className='w-full flex flex-col items-center '>
           <div className='w-full max-w-[1400px] p-[15px] flex flex-col items-center'>
-            <table className='border-[1px] border-neutral-800 h-auto w-full max-w-[900px] flex flex-col'>
-              <tr className='w-full flex bg-[#eef2f8] dark:bg-[#061817]  text-black dark:text-neutral-50 text-[1.2em] '>
-                <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'></th>
-                <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'></th>
-                <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'>Product</th>
-                <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'>Price</th>
-                <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'>Quantity</th>
-                <th className='h-[60px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse grow p-[10px]'>Subtotal</th>
+            <table className=' h-auto w-full max-w-[900px] flex flex-col gap-10 md:gap-0'>
+              <tr className='w-full hidden  md:flex bg-[#eef2f8] dark:bg-[#061817]  text-black dark:text-neutral-50 text-[1.2em] '>
+                <th className='h-[60px] w-[16.5%]  flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'></th>
+                <th className='h-[60px] w-[16.5%]  flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'></th>
+                <th className='h-[60px] w-[16.5%]  flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'>Product</th>
+                <th className='h-[60px] w-[16.5%]  flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'>Price</th>
+                <th className='h-[60px] w-[16.5%]  flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px]'>Quantity</th>
+                <th className='h-[60px] w-[16.5%]  flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse grow p-[10px]'>Subtotal</th>
               </tr>
               {cart.map((item) =>
-                <tr className='w-full text-neutral-400 text-[1.1em] flex font-semibold' >
-                  <td className='h-[150px] w-[16.5%] flex justify-center items-center  border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px] box-border'>
+                <tr className='w-full text-neutral-500 text-[1.1em] flex flex-col md:flex-row font-semibold' >
+                  <td className='h-auto md:h-[150px] w-full md:w-[16.5%] py-[15px] px-[10px] flex justify-center items-center  border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse  box-border'>
                     <button onClick={() => { setCart(cart.filter(i => i.pid !== item.pid)) }} className='cursor-pointer'>
                       <svg class="w-10 h-10 text-gray-white dark:text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" fill='#db2d23' d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm7.707-3.707a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586 9.707 8.293Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" fill='#ef4444' d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm7.707-3.707a1 1 0 0 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12l2.293-2.293a1 1 0 0 0-1.414-1.414L12 10.586 9.707 8.293Z" clip-rule="evenodd" />
                       </svg>
                     </button>
                   </td>
-                  <td className='h-[150px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px] box-border'>
-                    <div className='bg-neutral-900 h-[80%] p-[15px]'>
+                  <td className='h-[150px] w-full md:w-[16.5%] py-[15px] px-[10px] flex justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse box-border'>
+                    <div className='bg-neutral-300 dark:bg-neutral-900 h-full p-[15px]'>
                       <img src={products[item.pid - 1].image} alt="" className='h-full' />
                     </div>
                   </td>
-                  <td className='h-[150px] w-[16.5%] flex justify-center items-center text-red-500 border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse p-[10px] box-border'>
-                    <Link to={`/products/${products[item.pid - 1].id}`} className='text-[1.2em] [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden'>{products[item.pid - 1].title}</Link >
+                  <td className='h-auto md:h-[150px] w-full md:w-[16.5%] py-[15px] px-[10px] flex justify-between md:justify-center items-center text-red-400 border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse box-border'>
+                    <span className='text-neutral-500 md:hidden'>Product:</span>
+                    <Link to={`/products/${products[item.pid - 1].id}`} className='w-[50%] md:w-full text-[1.2em] max-md:truncate md:[display:-webkit-box] md:[-webkit-line-clamp:2] md:[-webkit-box-orient:vertical] md:overflow-hidden'>{products[item.pid - 1].title}</Link >
                   </td>
-                  <td className='h-[150px] w-[16.5%] flex justify-center items-center text-[1.1em] border-[1px] border-neutral-300 dark:border-neutral-800  border-collapse p-[10px] box-border'>
+                  <td className='h-auto md:h-[150px] w-full md:w-[16.5%] py-[15px] px-[10px] flex justify-between md:justify-center items-center text-[1.1em] border-[1px] border-neutral-300 dark:border-neutral-800  border-collapse  box-border'>
+                    <span className='text-neutral-500 md:hidden'>Price:</span>
                     <span>{`$${products[item.pid - 1].price}`}</span>
                   </td>
-                  <td className='h-[150px] w-[16.5%] flex justify-center items-center border-[1px] border-neutral-800 border-collapse p-[10px] box-border'>
-                    <input type="number" defaultValue={item.qt} min={1} className='h-[50px] w-[55px] border-[1px] outline-0 border-neutral-300 dark:border-neutral-800 text-[1.1em] p-[10px]' />
+                  <td className='h-auto md:h-[150px] w-full md:w-[16.5%] py-[15px] px-[10px]  flex justify-between md:justify-center items-center border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse  box-border'>
+                    <span className='text-neutral-500 md:hidden'>Quantity:</span>
+                    <input type="number" defaultValue={item.qt} min={1} className='h-[50px] w-[55px]  border-[1px] outline-0 border-neutral-300 dark:border-neutral-800 text-[1.1em] p-[10px]' />
                   </td>
-                  <td className='h-[150px] w-[16.5%] flex justify-center items-center text-[1.1em] grow border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse'>
+                  <td className='h-auto md:h-[150px] w-full md:w-[16.5%] py-[15px] px-[10px] flex justify-between md:justify-center items-center text-[1.1em] grow border-[1px] border-neutral-300 dark:border-neutral-800 border-collapse'>
+                    <span className='text-neutral-500 md:hidden'>Subtotal:</span>
                     <span>{`$${products[item.pid - 1].price * item.qt}`}</span>
                   </td>
                 </tr>

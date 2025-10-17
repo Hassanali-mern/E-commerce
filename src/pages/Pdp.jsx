@@ -67,7 +67,7 @@ const Pdp = () => {
           </div>
           <div className='h-auto w-full p-[15px] md:p-[30px] box flex flex-col gap-10'>
             <h2 className='text-[2em] font-bold'>Related Products</h2>
-            <div className='flex flex-wrap justify-center gap-5 w-full'>
+            <div className='flex flex-wrap justify-center gap-10 w-full'>
               {products.filter((item) => item.category === product.category).map((product, i) =>
                 <Product product={product} key={i} />
               )}

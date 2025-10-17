@@ -21,7 +21,7 @@ const BlogSection = () => {
                     </div>
                     <h2 className='text-[1.8em] text-center font-bold text-black dark:text-gray-200'>Sum Up Your Fashion Experience</h2>
                     <p className='text-[1.3em] text-gray-500 text-center'>The only sign of commercial activity within the harbour, visible from the beach of the Great Isabel, is the square blunt end</p>
-                    <button className='outline-0 text-[1.1em] font-semibold'>Continue Reading</button>
+                    <button className='outline-0 text-[1.1em]  text-black dark:text-gray-200 font-semibold'>Continue Reading</button>
 
                 </div>
                 <div className='h-auto w-[420px] flex flex-col items-center gap-5'>
@@ -33,7 +33,7 @@ const BlogSection = () => {
                     </div>
                     <h2 className='text-[1.8em] text-center font-bold text-black dark:text-gray-200'>This Is Why Fashion Is So Famous!</h2>
                     <p className='text-[1.3em] text-gray-500 text-center'>Human faces are very powerful. User Experience designer Aarron Walter describes in his book Designing for Emotion why we appreciate human faces</p>
-                    <button className='outline-0 text-[1.1em] font-semibold'>Continue Reading</button>
+                    <button className='outline-0 text-[1.1em]  text-black dark:text-gray-200 font-semibold'>Continue Reading</button>
 
                 </div>
                 <div className='h-auto w-[420px] flex flex-col items-center gap-5'>
@@ -45,7 +45,7 @@ const BlogSection = () => {
                     </div>
                     <h2 className='text-[1.8em] text-center font-bold text-black dark:text-gray-200'>5 Stereotypes About Fashion</h2>
                     <p className='text-[1.3em] text-gray-500 text-center'>Human faces are very powerful. User Experience designer Aarron Walter describes in his book Designing for Emotion why we appreciate human faces</p>
-                    <button className='outline-0 text-[1.1em] font-semibold'>Continue Reading</button>
+                    <button className='outline-0 text-[1.1em] text-black dark:text-gray-200 font-semibold'>Continue Reading</button>
 
                 </div>
             </div>

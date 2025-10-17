@@ -18,13 +18,13 @@ const ToggleNav = () => {
                         <Link to={'/products'} onClick={() => { setIsToggle(!isToggle) }}>All Products</Link>
                     </li>
                     <li className='toggle-nav-option'>
-                        <Link to={'/'} onClick={() => { setIsToggle(!isToggle) }}>Men's Clothing</Link>
+                        <Link to={'/mensclothing'} onClick={() => { setIsToggle(!isToggle) }}>Men's Clothing</Link>
                     </li>
                     <li className='toggle-nav-option'>
-                        <Link to={'/'} onClick={() => { setIsToggle(!isToggle) }}>Electronics</Link>
+                        <Link to={'/electronics'} onClick={() => { setIsToggle(!isToggle) }}>Electronics</Link>
                     </li>
                     <li className='toggle-nav-option'>
-                        <Link to={'/'} onClick={() => { setIsToggle(!isToggle) }}>Women's Clothing</Link>
+                        <Link to={'/womensclothing'} onClick={() => { setIsToggle(!isToggle) }}>Women's Clothing</Link>
                     </li>
                 </ul>
                 <SearchBox />
