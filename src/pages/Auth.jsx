@@ -4,7 +4,7 @@ import TopHeading from '../components/layout/ToggleNav'
 import Login from './Login'
 import Rejister from './Rejister'
 import { Outlet } from 'react-router'
-import ToggleNav from '../components/layout/'
+import ToggleNav from '../components/layout/ToggleNav'
 
 const Auth = () => {
   return (
