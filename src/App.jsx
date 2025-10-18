@@ -18,16 +18,17 @@ import { ThemeContext } from './context/ThemeContext'
 import MensClothing from './pages/MensClothing'
 import WomensClothing from './pages/WomensClothing'
 import Electronics from './pages/Electronics'
+import Profile from './pages/Profile'
 
 function App() {
 
-  const {theme ,setTheme} = useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext)
   const { user } = useContext(AuthContext)
 
   useEffect(() => {
-    if(theme === "dark"){
+    if (theme === "dark") {
       document.documentElement.classList.add("dark")
-    }else{
+    } else {
       document.documentElement.classList.remove("dark")
     }
   }, [theme])
@@ -44,8 +45,8 @@ function App() {
               <Route path='/auth/rejister' element={<Rejister />} />
             </Route>
             :
-            <Route path='/auth' element={<><Header /> <h1 className='text-gray-50 text-[5em] text-center mt-15'>You are ALready Login</h1></>}>
-              <Route index path='/auth/*' element={<><Header /> <h1 className='text-gray-50 text-[5em] text-center mt-15'>You are ALready Login</h1></>} />
+            <Route path='/auth' element={<Profile />}>
+              <Route index path='/auth/*' element={<Profile />} />
             </Route>
           }
           <Route path='/cart' element={<Cart />} />
